@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Assistant", sans-serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.logo svg {
+  margin-top: 15px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+  color: rgba(52, 45, 113, 1);
+  align-items: center;
+}
+#toggler,
+.navbar label {
+  display: none;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+}
+.buttons button:first-child {
+  background-color: transparent;
+  border: none;
+}
+.buttons button:nth-child(2) {
+  background-color: transparent;
+  border: none;
+}
+.buttons button:first-child {
+  background-color: transparent;
+  border: none;
+}
+.buttons button:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(89, 32, 188, 1);
+  border: 1px solid rgba(89, 32, 188, 1);
+  border-radius: 3px;
+  width: 118px;
+  height: 41px;
+  color: white;
+  gap: 10px;
+}
+.hero {
+  padding-top: 50px;
+  width: 100%;
+  padding-bottom: 150px;
+}
+.hero > div {
+  position: relative;
+  margin-top: -160px;
+}
+.hero > h1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  color: rgba(34, 34, 34, 1);
+}
+.down {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+.bgImage {
+  width: 100%;
+  height: 173px;
+  position: relative;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  place-items: center;
+  align-items: start;
+  padding-top: 30px;
+}
+.card {
+  width: 360px;
+  place-content: center;
+  margin-top: 20px;
+}
+.card > div {
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.imgText {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 3px;
+  width: 281px;
+  left: 17px;
+  bottom: 25px;
+  padding: 9px;
+}
+.imgText h2 {
+  columns: rgba(34, 34, 34, 1);
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+.imgText p {
+  color: rgba(34, 34, 34, 1);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.imgText img {
+  width: 20px;
+  height: 20px;
+}
+.downRow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.card-body p {
+  width: clamp(220px, 100%, 350px);
+  font-family: "Montserrat", sans-serif !important;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.08);
+  color: rgba(34, 34, 34, 1);
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  padding: 7px;
+}
+.ads {
+  background-image: url(../images/Rectangle.png);
+  height: 250px;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.img1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.img2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.content {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.leftContent img {
+  position: absolute;
+  bottom: 0;
+}
+.rightContent h1 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  color: rgba(34, 34, 34, 1);
+  padding: 20px 0px;
+}
+.rightContent {
+  width: 460px;
+  text-align: left;
+}
+.rightContent p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(34, 34, 34, 1);
+  opacity: 75%;
+  padding-bottom: 25px;
+}
+.downLogos {
+  display: flex;
+  gap: 15px;
+}
+footer {
+  padding: 40px 0px;
+}
+.footerList {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.col {
+  width: 200px;
+}
+.col p {
+  color: rgba(34, 34, 34, 1);
+  font-size: 14px;
+}
+.col ul {
+  list-style: none;
+}
+.col li {
+  margin: 15px;
+  color: rgba(34, 34, 34, 1);
+  opacity: 75%;
+}
+.col ul li:first-child {
+  font-weight: 700;
+}
+hr {
+  width: 100%;
+}
+.downPart {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.leftSide {
+  display: flex;
+  gap: 10px;
+}
+.rightSide {
+  display: flex;
+  gap: 20px;
+}
