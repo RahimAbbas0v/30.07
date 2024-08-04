@@ -27,7 +27,7 @@ async function showData() {
       card.classList.add("card");
       card.innerHTML += `
                    <div>
-              <img src=${element.cover_img.publicUrl} alt="" />
+              <img src=${element.cover_img.publicUrl} id="cardimg" alt="" />
               <div class="imgText">
                 <h2>${element.title_en}</h2>
                 <div class="downRow">
@@ -37,10 +37,22 @@ async function showData() {
               </div>
             </div>
             <div class="card-body">
-            ${element.subServices.map((elem) => {
-              return `<p>${elem.title_en}</p>`
-            }).join('')}
+            ${element.subServices
+              .map((elem) => {
+                return `<p>${elem.title_en}</p>`;
+              })
+              .join("")}
             </div>`;
+      let cardBody = card.querySelector(".card-body");
+      card.addEventListener("click", () => {
+        if ((cardBody.style.display = "none")) {
+          cardBody.classList.toggle("block");
+        }
+      });
+      // document.addEventListener("click", () => {
+      //   cardBody.style.display = "none";
+      // });
+
       cardsContainer.append(card);
     });
   } catch (error) {

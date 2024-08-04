@@ -71,7 +71,7 @@
   gap: 10px;
 }
 .hero {
-  padding-top: 50px;
+  padding-top: 30px;
   width: 100%;
   padding-bottom: 150px;
 }
@@ -98,15 +98,14 @@
 
 .cardsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  place-items: center;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
   padding-top: 30px;
 }
 .card {
-  width: 360px;
-  place-content: center;
-  margin-top: 20px;
+  width: 100%;
+  height: 100%;
 }
 .card > div {
   position: relative;
@@ -159,7 +158,8 @@
 }
 .ads {
   background-image: url(../images/Rectangle.png);
-  height: 250px;
+  min-height: 250px;
+  height: auto;
   width: 100%;
   position: relative;
   display: flex;
@@ -192,7 +192,7 @@
   padding: 20px 0px;
 }
 .rightContent {
-  width: 460px;
+  width: 50%;
   text-align: left;
 }
 .rightContent p {
@@ -211,13 +211,13 @@ footer {
   padding: 40px 0px;
 }
 .footerList {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 80%;
   margin: auto;
 }
 .col {
-  width: 200px;
+  width: 100%;
 }
 .col p {
   color: rgba(34, 34, 34, 1);
@@ -246,9 +246,121 @@ hr {
 }
 .leftSide {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 .rightSide {
   display: flex;
   gap: 20px;
+}
+#mobileNav {
+  display: none;
+}
+.block {
+  display: block !important;
+}
+.none {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu {
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+  .buttons {
+    display: none;
+  }
+  #mobileNav {
+    display: flex;
+    height: 50px;
+  }
+  .logo {
+    display: none;
+  }
+  .hero {
+    padding-top: 0px;
+  }
+  .img1,
+  .img2 {
+    display: none;
+  }
+  .rightContent {
+    display: flex;
+    width: 50%;
+    margin: 15px auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftContent img {
+    position: relative;
+  }
+  .content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+@media (max-width: 1199px) and (min-width: 568px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .footerList {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    place-content: center;
+  }
+  .col {
+    place-items: center;
+  }
+  .downPart {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  #cardimg {
+    object-fit: cover;
+    height: 120px;
+    object-position: center;
+    border-radius: 10px;
+  }
+  .card-body {
+    display: none;
+  }
+  .footerList {
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+    place-content: center;
+  }
+  .col > p {
+    width: 75%;
+    margin: auto;
+  }
 }
